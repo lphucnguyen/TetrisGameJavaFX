@@ -98,9 +98,6 @@ public class Tetris {
                         }
 
                         if(loop == 5){
-//                            reStart();
-//                            score = 0;
-//                            linesNo = 0;
                             time.cancel();
                             time.purge();
                             
@@ -157,9 +154,9 @@ public class Tetris {
         for(int[] a:MESH) {
             Arrays.fill(a, 0);
         }
-
-        scoreText.setText("Score: " + Integer.toString(0));
-        levelText.setText("Lines: " + Integer.toString(0));
+        
+        score = 0;
+        linesNo = 0;
 
         group.getChildren().addAll(line, scoreText, levelText);
 
